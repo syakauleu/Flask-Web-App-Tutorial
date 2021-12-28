@@ -6,14 +6,14 @@ pipeline {
     }
 
     stages {
-        stage('1Build') {
+        stage('1-Build') {
             steps {
-                echo "Start of Stage Build"
+                echo "Start of Stage Build......"
                 echo "Building....."
-                echo "End of Stage Build"
+                echo "End of Stage Build......"
             }
         }
-        stage('2Test') {
+        stage('2-Test') {
             steps {
                 echo "Start of Stage Test..."
                 echo "Testing......."
@@ -22,21 +22,20 @@ pipeline {
                 echo "End of Stage Build..."
             }
         }
-        stage('3Deploy') {
+        stage('3-Deploy') {
             steps {
                 echo "Start of Stage Deploy..."
                 echo "Deploying......."
                 sh "whoami"
-                sh '''
-                   "docker-compose build"
-                   "docker-compose up -d"
-                '''
+                sh "docker-compose build"
+                sh "docker-compose up -d"                
                 echo "End of Stage Build..."
             }
         }
-        stage('4Celebrate') {
+        stage('4-Celebrate') {
             steps {
                 echo "FINISH!"
             }
         }
     }
+}
