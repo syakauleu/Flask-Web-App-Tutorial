@@ -1,10 +1,10 @@
-# Указываю версию
+# indicate version docker-compose
 version: "3.9"
-# Даю имя севрису web
+# give a name web service
 services:
  web:
- # Задаю сборку с текущей директории
+ # set the assembly from the current directory
   build: .
-  # Прокидываю порты согласно инструкции с форка
+  # throw ports according to the instructions from the fork
   ports:
    - "5000:5000"
