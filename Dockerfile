@@ -1,13 +1,17 @@
-#указываю образ latest согласно инструкции с форк
-FROM python:latest
+### Stage_1
+#указываю образ
+FROM python:3-alpine3.14
+RUN echo "Install python complete!"
 #Указываю кто создал Dockerfile
 MAINTAINER S.Yakauleu
 #Указываю рабочую директорию
 WORKDIR /home/itstep/Flask-Web-App-Tutorial
 #Прокидываю необходимые файлы и папки внутрь
-COPY ./website /home/itstep/Flask-Web-App-Tutorial/website
-COPY ./requirements.txt /home/itstep/Flask-Web-App-Tutorial
-COPY ./main.py /home/itstep/Flask-Web-App-Tutorial
-RUN pip3 install -r requirements.txt
+COPY . .
+#### Stage_2
+RUN pip3 install -r requirements.txt && \
+    chmod +x main.py && \
+    echo "Install requirements complete!"
 # Прокидываю исполняемые файлы
 CMD [ "python", "main.py" ]
+RUN echo "go 5000 port"
