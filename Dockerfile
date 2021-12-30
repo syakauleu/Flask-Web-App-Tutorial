@@ -11,7 +11,7 @@ COPY . .
 #### Stage_2
 RUN pip3 install -r requirements.txt && \
     chmod +x main.py && \
-    echo "whoami" && \
+    sh "whoami" && \
     echo "Install requirements complete!"
 # Прокидываю исполняемые файлы
 CMD [ "python", "main.py" ]
