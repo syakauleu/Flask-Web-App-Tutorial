@@ -1,23 +1,15 @@
 # Flask Web App Tutorial
 
-## Setup & Installtion
+## Forked from https://github.com/techwithtim/Flask-Web-App-Tutorial
 
-Make sure you have the latest version of Python installed.
+Changed file main.py for the project to work
 
-```bash
-git clone <repo-url>
-```
+Make sure you have the latest version of Docker and docker-compose installed.
 
-```bash
-pip install -r requirements.txt
-```
-
-## Running The App
-
-```bash
-python main.py
-```
+# Install
+Installation takes place through Jenkins. To do this, you need to have access to your github. 
+And set up Jenkins so that the assembly would take place with Jenkinsfile. 
 
 ## Viewing The App
 
-Go to `http://127.0.0.1:5000`
+Go to `<your ip>:5000`
