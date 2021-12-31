@@ -4,7 +4,7 @@
 
 Changed file main.py for the project to work
 
-Make sure you have the latest version of Docker and docker-compose installed.
+Make sure you have the latest version of Docker,docker-compose and Jenkins installed.
 
 # Install
 Installation takes place through Jenkins. To do this, you need to have access to your github. 
